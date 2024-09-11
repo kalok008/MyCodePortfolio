@@ -5,7 +5,7 @@ int main() {
     int n, m, i, j, count = 1;
     cin >> n >> m >> i >> j;
     bool arr[n][m];
- 
+  
     for (int a = 0; a < n; a++) {
         for (int b = 0; b < m; b++) {
            arr[a][b] = 0;
