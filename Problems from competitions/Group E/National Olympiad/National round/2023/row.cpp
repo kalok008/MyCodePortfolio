@@ -2,9 +2,7 @@
 #include <cmath>
 using namespace std;
 
-long long sum_of_squares(long long k) {
-    return k * (k + 1) * (2 * k + 1) / 6;
-}
+long long sum_of_squares(long long k);
 
 int main() {
     long long n;
@@ -25,10 +23,14 @@ int main() {
     sum = sum_of_squares(i);
     i++;
     
-    if( (n-sum) % i !=0){
+    if( (n-sum) % i != 0){
         cout<<i*(i-1)/2 + (n-sum)/i + 1;
     }else{
         cout<<i*(i-1)/2 + (n-sum)/i;
     }
     return 0;
+}
+
+long long sum_of_squares(long long k) {
+    return k * (k + 1) * (2 * k + 1) / 6;
 }
