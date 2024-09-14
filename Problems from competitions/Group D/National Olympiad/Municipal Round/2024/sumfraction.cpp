@@ -4,14 +4,7 @@
 #include <numeric>
 using namespace std;
 
-int gcd(int a, int b) {
-    while(b!=0){
-        int t = b;
-        b = a % b;
-        a = t;
-    }
-    return a;
-}
+int gcd(int a, int b);
 
 int main(){
     int n;
@@ -50,4 +43,13 @@ int main(){
     cout<<sum.size();
 
     return 0;
+}
+
+int gcd(int a, int b){
+    while(b!=0){
+        int t = b;
+        b = a % b;
+        a = t;
+    }
+    return a;
 }
