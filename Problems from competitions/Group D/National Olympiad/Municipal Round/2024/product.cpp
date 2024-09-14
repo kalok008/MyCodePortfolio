@@ -1,14 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int count_5(int num) {
-    int count = 0;
-    while (num % 5 == 0){
-        count++;
-        num /= 5;
-    }
-    return count;
-}
+int count_5(int num);
 
 int main() {
     int a, b;
@@ -22,4 +15,13 @@ int main() {
     cout<<count;
 
     return 0;
+}
+
+int count_5(int num){
+    int count = 0;
+    while (num % 5 == 0){
+        count++;
+        num /= 5;
+    }
+    return count;
 }
